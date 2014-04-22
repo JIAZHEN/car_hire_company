@@ -142,17 +142,4 @@ public class Terminal {
         break;
     }
   }
-  
-  public static void main(String[] args) {
-    VehiclesController vehiclesController = new VehiclesController();
-    Terminal terminal = new Terminal(vehiclesController);
-    String optionNum = null;
-    while(optionNum == null || !optionNum.equals("0")) {
-      terminal.showMenu();
-      Scanner keyboard = new Scanner(System.in);
-      System.out.print("\nEnter your option: ");
-      optionNum = keyboard.nextLine();
-      terminal.process(Integer.parseInt(optionNum), keyboard);
-    }
-  }
 }
